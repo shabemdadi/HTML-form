@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+    <link type="html/css" rel="stylesheet" href="styles.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <h1>Order!</h1>
+
+    <table>
+        <thead>
+            <th>Melon Name</th>
+            <th>Price per lb</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Watermelon</td>
+                <td>$1.59</td>
+            </tr>
+
+            <tr>
+                <td>Honeydew</td>
+                <td>$0.99</td>
+            </tr>
+
+            <tr>
+                <td>Canteloupe</td>
+                <td>$1.29</td>
+            </tr>
+
+            <tr>
+                <td>Crenshaw</td>
+                <td>$2.19</td>
+            </tr>
+
+            <tr>
+                <td>Canary</td>
+                <td>$11.99</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Place your orders here! You know you want to.</p>
+
+    
+    <form class="col-md-4" action="https://ubermelon-order-form.herokuapp.com/process" method="POST">
+        <label>First Name:
+            <input type="text" name="firstname">
+        </label>
+        <br>
+
+        <label>Last Name:
+            <input type="text" name="lastname">
+        </label>
+        <br>
+
+        <label>Melon Type:
+            <select name="melontype">
+                <option value="watermelon">Watermelon</option>
+                <option value="honeydew">Honeydew</option>
+                <option value="canteloupe">Canteloupe</option>
+                <option value="crenshaw">Crenshaw</option>
+                <option value="canary">Canary</option>
+            </select>
+        </label>
+        <br>
+
+        <label>Quantity*:
+            <input type="text" name="quantity">
+        </label>
+        <br>
+
+        <label>Delivery Time:
+            <input type="radio" name="time" value="am">12:00am-12:00pm
+            <input type="radio" name="time" value="pm">12:00pm-12:00am
+            <input type="radio" name="time" value="wat">Time is an illusion
+        </label>
+        <br>
+
+        <label>Returning Customer:
+            <input type="radio" name="returncustomer" value="yes">Yes
+            <input type="radio" name="returncustomer" value="no">No
+        </label>
+        <br>
+
+        <label>For Statistical Purposes:
+            <input type="checkbox" name="stats" value="dog">Dog
+            <input type="checkbox" name="stats" value="cat">Cat
+            <input type="checkbox" name="stats" value="hedgehog">Hedgehog
+            <input type="checkbox" name="stats" value="balloonicorn">Ballonicorn
+            <input type="checkbox" name="stats" value="yak">Yak
+        </label>
+        <br>
+
+        <div class="btn-group" role="group" aria-label="...">
+            <button type="submit" class="btn btn-default">Submit
+        </div>        
+        
+
+        <div class=".col-md-8">
+            <p> This is a sample paragraph that we will put to the right of our form. Yay formatting - this is so much fun</p>
+        </div>
+</body>
+
+<footer>
+    <p>*Quantities given are by the flat.</p>
+</footer>
